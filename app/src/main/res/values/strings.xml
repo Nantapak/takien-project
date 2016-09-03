@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Takien Floating Market</string>
+    <string name="signup_thai">ลงทะเบียน</string>
+    <string name="signin_thai">เข้าสู่ระบบ</string>
+
+    <string name="user_thai">ชื่อผู้ใช้งาน :</string>
+    <string name="password_thai">รหัสผ่าน :</string>
+    <string name="repassword_thai">ยืนยันรหัสผ่าน :</string>
+    <string name="name_thai">ชื่อ-นามสกุล :</string>
+    <string name="id_thai">เลขประจำตัวประชาชน :</string>
+    <string name="birthday_thai">วัน/เดือน/ปีเกิด :</string>
+    <string name="address_thai">ที่อยู่ :</string>
+    <string name="tel_thai">เบอร์โทรศัพท์ :</string>
+    <string name="email_thai">อีเมลล์ :</string>
+    <string name="namestore_thai">ชื่อร้านค้า :</string>
+    <string name="description_thai">รายละเอียดร้านค้า :</string>
+    
 </resources>
