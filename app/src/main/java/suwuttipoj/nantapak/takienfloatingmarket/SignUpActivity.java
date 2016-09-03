@@ -104,6 +104,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
         builder.show();
+
     }
 
     private void uploadToServer() {
