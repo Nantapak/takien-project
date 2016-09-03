@@ -103,6 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        builder.show();
     }
 
     private void uploadToServer() {
