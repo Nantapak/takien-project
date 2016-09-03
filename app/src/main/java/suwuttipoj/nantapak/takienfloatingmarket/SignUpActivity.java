@@ -80,16 +80,16 @@ public class SignUpActivity extends AppCompatActivity {
         builder.setCancelable(false);
         builder.setIcon(R.drawable.nobita48);
         builder.setTitle("โปรดตรวจสอบข้อมูล");
-        builder.setMessage("User = " + userString + "\n" + 
-                "Password = " + passwordString + "\n" + 
-                "Name = " + nameString + "\n" + 
-                "ID = " + idString + "\n" +
-                "HBD = " + hbdString + "\n" + 
-                "Address = " + addressString + "\n" +
-                "Tel = " + telString + "\n" +
-                "E-mail = " + emailString + "\n" +
-                "NameStore = " + namestoreString + "\n" +
-                "Description = " + descriptionString + "\n");
+        builder.setMessage("ชื่อผู้ใช้งาน = " + userString + "\n" +
+                "รหัสผ่าน = " + passwordString + "\n" +
+                "ชื่อ-นามสกุล = " + nameString + "\n" +
+                "เลขประจำตัวประชาชน = " + idString + "\n" +
+                "วัน/เดือน/ปีเกิด = " + hbdString + "\n" +
+                "ที่อยู่ = " + addressString + "\n" +
+                "เบอร์โทรศัพท์ = " + telString + "\n" +
+                "อีเมลล์ = " + emailString + "\n" +
+                "ชื่อร้านค้า = " + namestoreString + "\n" +
+                "รายละเอียดร้านค้า = " + descriptionString + "\n");
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
