@@ -1,5 +1,7 @@
 package suwuttipoj.nantapak.takienfloatingmarket;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -54,10 +56,57 @@ public class SignUpActivity extends AppCompatActivity {
             // Have Space
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "มีช่องว่าง", "กรุณากรอกให้ครบทุกช่องครับ");
+        } else if (passwordString.equals(password2String)) {
+            // Password Map
+
+            confirmData();
+
+        } else { 
+
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, "รหัสผ่านไม่ตรงกัน",
+                    "กรุณากรอกรหัสผ่านให้ตรงกันครับ");
+
         }
+        
+        
 
 
     }   // clickSaveData
+
+    private void confirmData() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.nobita48);
+        builder.setTitle("โปรดตรวจสอบข้อมูล");
+        builder.setMessage("User = " + userString + "\n" + 
+                "Password = " + passwordString + "\n" + 
+                "Name = " + nameString + "\n" + 
+                "ID = " + idString + "\n" +
+                "HBD = " + hbdString + "\n" + 
+                "Address = " + addressString + "\n" +
+                "Tel = " + telString + "\n" +
+                "E-mail = " + emailString + "\n" +
+                "NameStore = " + namestoreString + "\n" +
+                "Description = " + descriptionString + "\n");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                uploadToServer();
+                dialog.dismiss();
+            }
+        });
+    }
+
+    private void uploadToServer() {
+    }
 
     private boolean checkSpace() {
         return userString.equals("") ||
