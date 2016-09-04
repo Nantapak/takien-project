@@ -4,9 +4,20 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -15,8 +26,10 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText userEditText, passwordEditText, password2EditText, nameEditText, idEditText, hbdEditText, addressEditText,
             telEditText, emailEditText, namestoreEditText, descriptionEditText;
     private String userString, passwordString, password2String, nameString, idString,
-            hbdString, addressString, telString, emailString, namestoreString, descriptionString;
+            hbdString, addressString, telString, emailString, namestoreString, descriptionString
+            ;
     private DatePicker datePicker;
+    private static final String urlPHP = "http://swiftcodingthai.com/ton/php_add_user.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +136,38 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void uploadToServer() {
-    }
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+        RequestBody requestBody = new FormEncodingBuilder()
+                .add("isAdd", "true")
+                .add("User", userString)
+                .add("Password", passwordString)
+                .add("Name", nameString)
+                .add("Idcard", idString)
+                .add("Born", hbdString)
+                .add("Address", addressString)
+                .add("Tel", telString)
+                .add("Email", emailString)
+                .add("Namestore", namestoreString)
+                .add("Description", descriptionString)
+                .build();
+        Request.Builder builder = new Request.Builder();
+        Request request = builder.url(urlPHP).post(requestBody).build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Request request, IOException e) {
+                Log.d("4SepV1", "e ==> " + e.toString());
+            }
+
+            @Override
+            public void onResponse(Response response) throws IOException {
+                Log.d("4SepV1", "Result ==> " + response.body().string());
+
+            }
+        });
+
+    } // uploadToServer
 
     private boolean checkSpace() {
         return userString.equals("") ||
