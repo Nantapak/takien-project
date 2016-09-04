@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class SignUpActivity extends AppCompatActivity {
             telEditText, emailEditText, namestoreEditText, descriptionEditText;
     private String userString, passwordString, password2String, nameString, idString,
             hbdString, addressString, telString, emailString, namestoreString, descriptionString;
-
+    private DatePicker datePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +35,23 @@ public class SignUpActivity extends AppCompatActivity {
         emailEditText = (EditText) findViewById(R.id.editText9);
         namestoreEditText = (EditText) findViewById(R.id.editText10);
         descriptionEditText = (EditText) findViewById(R.id.editText11);
+        datePicker = (DatePicker) findViewById(R.id.datePicker);
+
+        //Setup datePicker
+        datePicker.setSpinnersShown(false);
 
 
     } // Main Method
+
+    public void clickSetDate(View view) {
+        int intDate = datePicker.getDayOfMonth();
+        int intMouth = datePicker.getMonth() + 1;
+        int intYear = datePicker.getYear();
+        String strBorn = Integer.toString(intDate) + "/" +
+                Integer.toString(intMouth) + "/" +
+                Integer.toString(intYear);
+        hbdEditText.setText(strBorn);
+    }
 
     public void clickSaveData(View view) {
         userString = userEditText.getText().toString().trim();

@@ -39,7 +39,8 @@
             android:layout_below="@+id/textView"
             android:layout_above="@+id/button3"
             android:layout_margin="15dp"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:background="#82baa00e">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -57,7 +58,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,7 +77,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
+                    android:inputType="textPassword|text"
                     android:ems="10"
                     android:id="@+id/editText2"
                     android:layout_weight="2" />
@@ -97,7 +99,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
+                    android:inputType="textPassword|text"
                     android:ems="10"
                     android:id="@+id/editText3"
                     android:layout_weight="2" />
@@ -120,7 +122,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText4"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -139,26 +142,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText5"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:inputType="number|text" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <TextView
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthday_thai"
+                        android:id="@+id/textView7"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText6"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Set Date"
+                    android:id="@+id/button4"
+                    android:onClick="clickSetDate" />
+
+                <DatePicker
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/birthday_thai"
-                    android:id="@+id/textView7"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editText6"
-                    android:layout_weight="2" />
+                    android:id="@+id/datePicker" />
 
             </LinearLayout>
 
@@ -180,7 +203,8 @@
                     android:id="@+id/editText7"
                     android:layout_weight="2"
                     android:lines="3"
-                    android:gravity="top" />
+                    android:gravity="top"
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -199,7 +223,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText8"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:hint="0812345678" />
             </LinearLayout>
 
             <LinearLayout
