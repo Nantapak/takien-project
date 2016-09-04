@@ -2,6 +2,10 @@
     <string name="app_name">Takien Floating Market</string>
     <string name="signup_thai">ลงทะเบียน</string>
     <string name="signin_thai">เข้าสู่ระบบ</string>
+    <string name="register_thai">สมัครสมาชิก</string>
+    <string name="forgetpass_thai">ลืมรหัสผ่าน</string>
+    <string name="ok_thai">ตกลง</string>
+    <string name="cancel_thai">ยกเลิก</string>
 
     <string name="user_thai">ชื่อผู้ใช้งาน :</string>
     <string name="password_thai">รหัสผ่าน :</string>
@@ -14,5 +18,19 @@
     <string name="email_thai">อีเมลล์ :</string>
     <string name="namestore_thai">ชื่อร้านค้า :</string>
     <string name="description_thai">รายละเอียดร้านค้า :</string>
-    
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
 </resources>
