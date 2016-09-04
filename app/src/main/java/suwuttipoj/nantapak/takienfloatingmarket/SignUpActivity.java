@@ -56,6 +56,13 @@ public class SignUpActivity extends AppCompatActivity {
 
     } // Main Method
 
+    public void clickBackSignUp(View view) {
+        finish();
+    }
+
+
+
+
     public void clickSetDate(View view) {
         int intDate = datePicker.getDayOfMonth();
         int intMouth = datePicker.getMonth() + 1;

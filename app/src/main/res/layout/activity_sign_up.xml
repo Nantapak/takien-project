@@ -292,4 +292,13 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;&lt;&lt;&lt;"
+        android:id="@+id/textView18"
+        android:textSize="30dp"
+        android:clickable="true"
+        android:onClick="clickBackSignUp" />
+
 </RelativeLayout>
