@@ -13,6 +13,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     } //Main Method
 
+    public void clickCancel(View view) {
+        finish();
+    }
+
     public void clickNewRegis(View view) {
         startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
     }
