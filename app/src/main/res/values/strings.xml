@@ -10,7 +10,8 @@
     <string name="user_thai">ชื่อผู้ใช้งาน :</string>
     <string name="password_thai">รหัสผ่าน :</string>
     <string name="repassword_thai">ยืนยันรหัสผ่าน :</string>
-    <string name="name_thai">ชื่อ-นามสกุล :</string>
+    <string name="name_thai">ชื่อ :</string>
+    <string name="surname_thai">นามสกุล :</string>
     <string name="id_thai">เลขประจำตัวประชาชน :</string>
     <string name="birthday_thai">วัน/เดือน/ปีเกิด :</string>
     <string name="address_thai">ที่อยู่ :</string>
