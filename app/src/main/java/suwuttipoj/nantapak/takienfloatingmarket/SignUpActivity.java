@@ -118,7 +118,7 @@ public class SignUpActivity extends AppCompatActivity {
         builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //uploadToServer();
+                uploadToServer();
                 dialog.dismiss();
             }
         });
@@ -151,7 +151,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onResponse(Response response) throws IOException {
                 Log.d("4SepV1", "Result ==> " + response.body().string());
-
+                finish();
             }
         });
 
