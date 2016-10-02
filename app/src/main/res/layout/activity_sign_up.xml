@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="suwuttipoj.nantapak.takienfloatingmarket.SignUpActivity">
+    tools:context="suwuttipoj.nantapak.takienfloatingmarket.SignUpActivity"
+    android:background="@drawable/orangewall2">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +16,8 @@
         android:text="@string/signup_thai"
         android:id="@+id/textView"
         android:textSize="35sp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_orange_light" />
 
     <Button
         android:layout_width="match_parent"
@@ -29,7 +31,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView"
+        android:background="#82baa00e"
         android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
         android:layout_above="@+id/button3">
 
         <LinearLayout
@@ -299,6 +305,10 @@
         android:id="@+id/textView18"
         android:textSize="30dp"
         android:clickable="true"
-        android:onClick="clickBackSignUp" />
+        android:onClick="clickBackSignUp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_orange_dark" />
 
 </RelativeLayout>
