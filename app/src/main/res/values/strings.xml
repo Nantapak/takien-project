@@ -6,6 +6,10 @@
     <string name="forgetpass_thai"> ลืมรหัสผ่าน</string>
     <string name="ok_thai">ตกลง</string>
     <string name="cancel_thai">ยกเลิก</string>
+    <string name="takienfloatingmarket_thai">ตลาดน้ำวัดตะเคียน</string>
+    <string name="map_thai">แผนที่มายังวัดตะเคียน</string>
+    <string name="member_thai">สมาชิก</string>
+
 
     <string name="user_thai">ชื่อผู้ใช้งาน :</string>
     <string name="password_thai">รหัสผ่าน :</string>

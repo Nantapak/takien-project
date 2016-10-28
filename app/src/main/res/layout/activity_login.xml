@@ -11,17 +11,6 @@
     tools:context="suwuttipoj.nantapak.takienfloatingmarket.LoginActivity"
     android:background="@drawable/orangewall2">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/signin_thai"
-        android:id="@+id/textView13"
-        android:textSize="35sp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textColor="#faba1f"
-        android:layout_marginTop="20dp" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -153,5 +142,17 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/linearLayout"
         android:background="@drawable/logo"></LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signin_thai"
+        android:id="@+id/textView13"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#faba1f"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
