@@ -27,16 +27,28 @@
         android:layout_alignParentBottom="true"
         android:onClick="clickSaveData" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;&lt;&lt;&lt;"
+        android:id="@+id/textView18"
+        android:textSize="30dp"
+        android:clickable="true"
+        android:onClick="clickBackSignUp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_orange_dark" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView"
         android:background="#82baa00e"
+
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-
-        android:layout_above="@+id/button3">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -217,18 +229,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&lt;&lt;&lt;&lt;"
-        android:id="@+id/textView18"
-        android:textSize="30dp"
-        android:clickable="true"
-        android:onClick="clickBackSignUp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/holo_orange_dark" />
 
 </RelativeLayout>
