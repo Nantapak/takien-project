@@ -9,16 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="suwuttipoj.nantapak.takienfloatingmarket.SignUpActivity"
-    android:background="@drawable/orangewall2">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/signup_thai"
-        android:id="@+id/textView"
-        android:textSize="35sp"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/holo_orange_light" />
+    android:background="@drawable/backgroundregis">
 
     <Button
         android:layout_width="match_parent"
@@ -39,7 +30,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="@android:color/holo_orange_dark" />
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginTop="20dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -50,7 +42,8 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button3">
+        android:layout_above="@+id/button3"
+        android:layout_marginTop="125dp">
 
         <LinearLayout
             android:orientation="vertical"
