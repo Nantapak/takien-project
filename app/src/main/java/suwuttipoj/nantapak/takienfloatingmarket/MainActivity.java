@@ -34,4 +34,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void clickInformation(View view) {
+        Intent intent = new Intent(MainActivity.this, InformationActivity.class);
+        startActivity(intent);
+
+    }
+    public void clickReligious(View view) {
+        Intent intent = new Intent(MainActivity.this, ReligiousActivity.class);
+        startActivity(intent);
+
+    }
 }

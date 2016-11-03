@@ -40,14 +40,16 @@
                     android:id="@+id/imageView4"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:background="@drawable/religious02" />
+                    android:background="@drawable/religious02"
+                    android:onClick="clickReligious" />
 
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_weight="1"
                     android:background="@drawable/information01"
                     android:layout_width="wrap_content"
-                    android:layout_height="177dp" />
+                    android:layout_height="177dp"
+                    android:onClick="clickInformation" />
             </LinearLayout>
 
             <LinearLayout
