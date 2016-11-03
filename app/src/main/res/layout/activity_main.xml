@@ -10,19 +10,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="suwuttipoj.nantapak.takienfloatingmarket.MainActivity"
-    android:background="@drawable/backgroundmain01">
+    android:background="@drawable/backgroundmain02">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textView6"
         android:layout_marginTop="120dp"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="40dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="248dp"
