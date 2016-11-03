@@ -10,14 +10,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="suwuttipoj.nantapak.takienfloatingmarket.MainActivity"
-    android:background="@drawable/backgroundmain02">
+    android:background="@drawable/backgroundmain03">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textView6"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="40dp">
+        android:layout_marginTop="120dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,11 +43,11 @@
                     android:layout_height="57dp" />
 
                 <ImageView
-                    android:layout_width="150dp"
-                    app:srcCompat="@drawable/relation"
                     android:id="@+id/imageView5"
-                    android:layout_height="56dp"
-                    android:layout_weight="0.48" />
+                    android:layout_weight="1"
+                    android:background="@drawable/information01"
+                    android:layout_width="177dp"
+                    android:layout_height="177dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -57,33 +56,18 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="176dp"
-                    app:srcCompat="@drawable/ranking"
-                    android:id="@+id/imageView6"
-                    android:layout_height="match_parent" />
-
-                <ImageView
-                    android:src="@drawable/member"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:id="@+id/imageView3"
-                    android:onClick="clickMember" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/map01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/mapgotowat01"
                     android:id="@+id/imageView"
-                    android:elevation="1dp"
-                    android:onClick="clickMaps" />
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:src="@drawable/login01"
+                    android:id="@+id/imageView3"
+                    android:onClick="clickMember"
+                    android:layout_height="wrap_content"
+                    android:layout_width="175dp" />
 
             </LinearLayout>
 
@@ -92,19 +76,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:text="Button"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button13"
+                    app:srcCompat="@drawable/marketfloting01"
+                    android:id="@+id/imageView9"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button14"
+                    app:srcCompat="@drawable/wattakien01"
+                    android:id="@+id/imageView8"
                     android:layout_weight="1" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
