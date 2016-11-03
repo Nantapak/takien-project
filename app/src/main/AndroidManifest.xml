@@ -46,7 +46,9 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".WattakienActivity" />
+        <activity android:name=".MarketflotingActivity"></activity>
     </application>
 
 </manifest>

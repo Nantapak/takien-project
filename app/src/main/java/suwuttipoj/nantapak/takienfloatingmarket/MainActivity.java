@@ -24,4 +24,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void clickWattakien(View view) {
+        Intent intent = new Intent(MainActivity.this, WattakienActivity.class);
+        startActivity(intent);
+
+    }
+    public void clickMarketfloting(View view) {
+        Intent intent = new Intent(MainActivity.this, MarketflotingActivity.class);
+        startActivity(intent);
+
+    }
 }

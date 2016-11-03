@@ -54,7 +54,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/user_thai"
                     android:id="@+id/textView14"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -73,7 +74,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/password_thai"
                     android:id="@+id/textView15"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp" />
 
                 <EditText
                     android:layout_width="match_parent"

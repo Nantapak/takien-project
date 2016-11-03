@@ -82,6 +82,7 @@
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/marketfloting01"
                     android:id="@+id/imageView9"
+                    android:onClick="clickMarketfloting"
                     android:layout_weight="1" />
 
                 <ImageView
@@ -89,6 +90,7 @@
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/wattakien01"
                     android:id="@+id/imageView8"
+                    android:onClick="clickWattakien"
                     android:layout_weight="1" />
 
             </LinearLayout>
