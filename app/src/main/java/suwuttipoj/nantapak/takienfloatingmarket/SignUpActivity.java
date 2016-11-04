@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
@@ -26,9 +29,14 @@ public class SignUpActivity extends AppCompatActivity {
             nameEditText, surnameEditText, addressEditText,
             telEditText, emailEditText;
 
+    private RadioGroup radioGroup;
+    private RadioButton prefix1RadioButton,prefix2RadioButton,prefix3RadioButton;
+    private Spinner districtSpiner, amphurSpiner, provinceSpiner;
+
     private String userString, passwordString, password2String,
             nameString, surnameString, addressString,
-            telString, emailString;
+            telString, emailString, prefixString, districtString,
+            amphurString, provinceString;
 
     private static final String urlPHP = "http://swiftcodingthai.com/ton/php_add_user.php";
 
@@ -46,9 +54,13 @@ public class SignUpActivity extends AppCompatActivity {
         addressEditText = (EditText) findViewById(R.id.editText7);
         telEditText = (EditText) findViewById(R.id.editText8);
         emailEditText = (EditText) findViewById(R.id.editText9);
-
-
-
+        radioGroup = (RadioGroup) findViewById(R.id.ragPrefix);
+        prefix1RadioButton = (RadioButton) findViewById(R.id.radioButton5);
+        prefix2RadioButton = (RadioButton) findViewById(R.id.radioButton4);
+        prefix3RadioButton = (RadioButton) findViewById(R.id.radioButton3);
+        districtSpiner = (Spinner) findViewById(R.id.spinner);
+        amphurSpiner = (Spinner) findViewById(R.id.spinner2);
+        provinceSpiner = (Spinner) findViewById(R.id.spinner3);
 
 
     } // Main Method
@@ -77,16 +89,16 @@ public class SignUpActivity extends AppCompatActivity {
             // Have Space
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "มีช่องว่าง", "กรุณากรอกให้ครบทุกช่องครับ");
-        } else if (passwordString.equals(password2String)) {
-            // Password Map
+        } else if (!passwordString.equals(password2String)) {
 
-            confirmData();
-
-        } else {
-
+            // Password not mat
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "รหัสผ่านไม่ตรงกัน",
                     "กรุณากรอกรหัสผ่านให้ตรงกันครับ");
+
+        } else {
+
+
 
         }
 

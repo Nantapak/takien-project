@@ -41,4 +41,12 @@
     </string>
     <string name="title_activity_maps">Map</string>
 
+    <string name="prefix1">นางสาว</string>
+    <string name="prefix2">นาง</string>
+    <string name="prefix3">นาย</string>
+    <string name="district">ตำบล</string>
+    <string name="amphur">อำเภอ</string>
+    <string name="province">จังหวัด</string>
+
+
 </resources>
