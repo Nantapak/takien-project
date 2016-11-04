@@ -1,11 +1,14 @@
 package suwuttipoj.nantapak.takienfloatingmarket;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,6 +21,9 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -38,12 +44,17 @@ public class SignUpActivity extends AppCompatActivity {
             telString, emailString, prefixString, districtString,
             amphurString, provinceString;
 
+
     private static final String urlPHP = "http://swiftcodingthai.com/ton/php_add_user.php";
+
+    private MyConstante myConstante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        myConstante = new MyConstante();
 
         //Bind Widget
         userEditText = (EditText) findViewById(R.id.editText);
@@ -62,8 +73,99 @@ public class SignUpActivity extends AppCompatActivity {
         amphurSpiner = (Spinner) findViewById(R.id.spinner2);
         provinceSpiner = (Spinner) findViewById(R.id.spinner3);
 
+        //Radio Controller
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int i) {
+
+                switch (i) {
+
+                    case R.id.radioButton5:
+                        prefixString = "1";
+                        break;
+                    case R.id.radioButton4:
+                        prefixString = "2";
+                        break;
+                    case R.id.radioButton3:
+                        prefixString = "3";
+                        break;
+                }   //switch
+
+            }
+        });
+
+
+        //Create Province Spinner
+        SynProvince synProvince = new SynProvince(SignUpActivity.this);
+        synProvince.execute(myConstante.getUrlGetProvinceString());
+
 
     } // Main Method
+
+    //For Load String Array Create Province Spinner
+    private class SynProvince extends AsyncTask<String, Void, String> {
+
+        //Explicit
+        private Context context;
+        private String[] provinceStrings;
+
+
+        public SynProvince(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            try {
+
+                OkHttpClient okHttpClient = new OkHttpClient();
+                Request.Builder builder = new Request.Builder();
+                Request request = builder.url(params[0]).build();
+                Response response = okHttpClient.newCall(request).execute();
+                return response.body().string();
+
+            } catch (Exception e) {
+                Log.d("4novV2", "e.doInBack ==>" + e.toString());
+                return null;
+            }
+
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            Log.d("4novV2", "JSON ==>" + s);
+
+            try {
+
+                JSONArray jsonArray = new JSONArray(s);
+
+                provinceStrings = new String[jsonArray.length()];
+
+                for (int i=0;i<jsonArray.length();i++) {
+
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                    provinceStrings[i] = jsonObject.getString("PROVINCE_NAME");
+                    Log.d("4novV2", "province[" + i + "] ==>" + provinceStrings[i]);
+
+                } //for
+
+                ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(context,
+                        android.R.layout.simple_list_item_1, provinceStrings);
+                provinceSpiner.setAdapter(stringArrayAdapter);
+
+
+
+            } catch (Exception e) {
+                Log.d("4novV2", "e onPost ==>" + e.toString());
+            }
+
+        }
+    }   //SynProvince Class
+
 
     public void clickBackSignUp(View view) {
         finish();
