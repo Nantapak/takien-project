@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -157,6 +158,18 @@ public class SignUpActivity extends AppCompatActivity {
                         android.R.layout.simple_list_item_1, provinceStrings);
                 provinceSpiner.setAdapter(stringArrayAdapter);
 
+                provinceSpiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                        createAmphurSpinner(provinceStrings[i]);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        createAmphurSpinner(provinceStrings[0]);
+                    }
+                });
+
 
 
             } catch (Exception e) {
@@ -165,6 +178,13 @@ public class SignUpActivity extends AppCompatActivity {
 
         }
     }   //SynProvince Class
+
+    private void createAmphurSpinner(String provinceString) {
+
+        Log.d("4novV3", "Province ==>" + provinceString);
+
+
+    }
 
 
     public void clickBackSignUp(View view) {
