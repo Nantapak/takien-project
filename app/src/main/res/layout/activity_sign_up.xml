@@ -4,10 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="suwuttipoj.nantapak.takienfloatingmarket.SignUpActivity"
     android:background="@drawable/backgroundregis">
 
@@ -29,7 +25,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/button3"
-        android:layout_marginTop="125dp">
+        android:layout_marginTop="125dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -47,17 +45,18 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/user_thai"
                     android:id="@+id/textView2"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_weight="1" />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:inputType="text" />
             </LinearLayout>
 
@@ -67,11 +66,12 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/password_thai"
                     android:id="@+id/textView3"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_weight="1" />
 
                 <EditText
                     android:layout_width="0dp"
@@ -79,7 +79,7 @@
                     android:inputType="textPassword|text"
                     android:ems="10"
                     android:id="@+id/editText2"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -89,11 +89,12 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView4"
                     android:textSize="20sp"
-                    android:text="@string/repassword_thai" />
+                    android:text="@string/repassword_thai"
+                    android:layout_weight="1" />
 
                 <EditText
                     android:layout_width="0dp"
@@ -101,7 +102,7 @@
                     android:inputType="textPassword|text"
                     android:ems="10"
                     android:id="@+id/editText3"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -111,17 +112,18 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/name_thai"
                     android:id="@+id/textView5"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_weight="1" />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText4"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:inputType="text" />
             </LinearLayout>
 
@@ -131,17 +133,18 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/surname_thai"
                     android:id="@+id/textView20"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_weight="1" />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText14"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:inputType="text" />
             </LinearLayout>
 
