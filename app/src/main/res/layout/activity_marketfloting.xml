@@ -11,4 +11,7 @@
     tools:context="suwuttipoj.nantapak.takienfloatingmarket.MarketflotingActivity"
     android:background="@drawable/backgroundmarketfloting01">
 
+
 </RelativeLayout>
+
+
