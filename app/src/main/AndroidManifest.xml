@@ -48,9 +48,15 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".MainActivity" />
         <activity android:name=".WattakienActivity" />
-        <activity android:name=".MarketflotingActivity" />
         <activity android:name=".InformationActivity" />
-        <activity android:name=".ReligiousActivity"></activity>
+        <activity android:name=".ReligiousActivity" />
+
+        <activity
+            android:name=".Tab_mkActivity"
+            android:label="@string/title_activity_tab_mk"
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>

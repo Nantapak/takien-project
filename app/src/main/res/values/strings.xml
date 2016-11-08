@@ -12,7 +12,6 @@
     <string name="admin_thai">แอดมิน</string>
 
 
-
     <string name="user_thai">ชื่อผู้ใช้งาน :</string>
     <string name="password_thai">รหัสผ่าน :</string>
     <string name="repassword_thai">ยืนยันรหัสผ่าน :</string>
@@ -47,6 +46,12 @@
     <string name="district">ตำบล</string>
     <string name="amphur">อำเภอ</string>
     <string name="province">จังหวัด</string>
+    <string name="title_activity_tab_mk">Tab_mkActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
